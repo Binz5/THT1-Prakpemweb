@@ -81,7 +81,8 @@
         #home h2,
         #projects h3,
         #skills h2,
-        #contact h2 {
+        #contact h2,
+        #services h2 {
             text-align: center;
             margin-bottom: 10px;
         }
@@ -118,20 +119,27 @@
         }
 
         #services {
-            display: flex;
-            justify-content: space-around;
             text-align: center;
+            margin-top: 20px;
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-around; 
+            flex-wrap: wrap; 
         }
 
         .service-item {
-            flex-basis: 30%;
+            flex: 1 1 30%;
+            margin: 10px;
             background-color: #f1f1f1;
             padding: 20px;
             border-radius: 10px;
+            transition: background-color 0.3s;
         }
 
         .service-item:hover {
-            background-color: #ddd;
+            background-color: #ddd; 
         }
 
         .service-item h3 {
@@ -191,8 +199,8 @@
                 width: 90%;
             }
 
-            #services {
-                flex-direction: column;
+            .service-item {
+                flex: 1 1 80%; 
             }
 
             #skills table {
@@ -211,6 +219,7 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -269,6 +278,24 @@
                 <td>HTML</td>
             </tr>
         </table>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Building modern, responsive websites that engage users.</p>
+            </div>
+            <div class="service-item">
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and user-friendly interfaces for web and mobile apps.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consultation</h3>
+                <p>Offering expert advice to help you plan and execute your web projects.</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
